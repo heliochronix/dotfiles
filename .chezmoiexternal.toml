@@ -2,7 +2,7 @@
     type = "git-repo"
     url = "https://github.com/ohmyzsh/ohmyzsh.git"
     refreshPeriod = "168h"
-[".oh-my-zsh/custom/themes/starship-prompt"]
+[".oh-my-zsh/custom/themes/spaceship-prompt"]
     type = "git-repo"
     url = "https://github.com/spaceship-prompt/spaceship-prompt.git"
     refreshPeriod = "168h"
