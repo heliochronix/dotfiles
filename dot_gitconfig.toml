@@ -1,0 +1,22 @@
+[user]
+{{- if eq .chezmoi.os "linux" }}
+{{-  if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+	email = msimpson@tethers.com
+{{-  else }}
+	email = miles@milessimpson.com
+{{-  end }}
+{{- end }}
+	name = Miles Simpson
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[push]
+	default = simple
+	autoSetupRemote = true
+[color]
+	ui = auto
+[http "https://gopkg.in"]
+	followRedirects = true
+[init]
+	defaultBranch = master
