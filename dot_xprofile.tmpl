@@ -1,10 +1,9 @@
 #!/bin/sh
 
 export STEAM_FRAME_FORCE_CLOSE=1
-
-{{ if eq .chezmoi.hostname "interface01" }}
+{{- if eq .chezmoi.hostname "interface01" }}
   nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=100"&
-{{ end }}
+{{- end }}
 
 nm-applet &
 xbindkeys &
