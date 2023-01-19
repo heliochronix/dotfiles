@@ -1,11 +1,5 @@
 [user]
-{{- if eq .chezmoi.os "linux" }}
-{{-  if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
-	email = msimpson@tethers.com
-{{-  else }}
-	email = miles@milessimpson.com
-{{-  end }}
-{{- end }}
+	email = {{ .email }}
 	name = Miles Simpson
 [core]
 	editor = vim
