@@ -164,9 +164,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.profile
-{{- if eq .chezmoi.os "linux" }}
-{{-   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+{{- if eq .osid "linux-ubuntu-wsl" }}
 alias swift-toolkit="docker run -it --rm -e DISPLAY=$DISPLAY -e USERNAME=$USER -u $(id -u):$(id -g) -v $HOME/work:/work -v $HOME/docker_home:/home/$USER -w /\${PWD#$HOME/} --dns-search secure.tethers.com docker.secure.tethers.com/swift/swift-toolkit"
 alias raven-toolkit="docker run -it --rm -e DISPLAY=$DISPLAY -e USERNAME=$USER -u $(id -u):$(id -g) -v $HOME/work:/work -v $HOME/docker_home:/home/$USER -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK) -w /\${PWD#$HOME/} -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK --dns-search secure.tethers.com docker.secure.tethers.com/raven/raven-toolkit"
-{{-   end }}
 {{- end }}
