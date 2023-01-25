@@ -1,16 +1,23 @@
 [user]
 	email = {{ .email }}
 	name = {{ .name }}
+
 [core]
 	editor = vim
+
+[init]
+	defaultBranch = master
+
 [merge]
 	tool = vimdiff
+
 [push]
 	default = simple
 	autoSetupRemote = true
-[color]
-	ui = auto
-[http "https://gopkg.in"]
+
+[http]
 	followRedirects = true
-[init]
-	defaultBranch = master
+
+[url "ssh://git@github.com/"]
+	pushInsteadOf = https://github.com/
+	pushInsteadOf = https://heliochronix@github.com/
