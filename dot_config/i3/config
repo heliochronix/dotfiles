@@ -68,8 +68,7 @@ bindsym $mod+d exec "dmenu_run -nf '#00B400' -nb '#303030' -sb '#00B400' -sf '#0
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # Interactive screenshot
-bindsym Print exec gnome-screenshot -i
-bindsym $mod+Print exec gnome-screenshot -w
+bindsym $mod+Shift+s exec gnome-screenshot -i
 
 bindsym $mod+t exec ~/scripts/i3_title.sh
 bindsym $mod+Shift+t exec ~/scripts/i3_title.sh parent
