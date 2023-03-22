@@ -1,0 +1,5 @@
+ServerAliveInterval 60
+ForwardAgent yes
+{{- if ne .osid "linux-ubuntu-wsl" }}
+IdentityAgent ~/.1password/agent.sock
+{{- end }}

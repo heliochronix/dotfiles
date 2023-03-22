@@ -129,7 +129,9 @@ CASE_SENSITIVE="true"
 plugins=(
     git
     rsync
+{{- if eq .osid "linux-ubuntu-wsl" }}
     ssh-agent
+{{- end }}
     fzf
 )
 
