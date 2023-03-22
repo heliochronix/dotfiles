@@ -1,9 +1,13 @@
 #!/bin/sh
 
 export STEAM_FRAME_FORCE_CLOSE=1
+{{- if ne .osid "linux-ubuntu-wsl" }}
+export SSH_AUTH_AGENT=$HOME/.1password/agent.sock
+{{- end }}
 
 xbindkeys &
 ~/.fehbg &
 picom &
 dunst &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+1password &
