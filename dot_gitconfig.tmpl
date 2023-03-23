@@ -1,6 +1,15 @@
 [user]
 	email = {{ .email }}
 	name = {{ .name }}
+{{- if ne .osid "linux-ubuntu-wsl" }}
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOojMDbbIGIYXQx3DKIxRfJnKRZ10A4O7YVqtQboD3dW
+
+[gpg]
+	format = ssh
+
+[commit]
+	gpgsign = true
+{{- end }}
 
 [core]
 	editor = vim
@@ -21,3 +30,4 @@
 [url "ssh://git@github.com/"]
 	pushInsteadOf = https://github.com/
 	pushInsteadOf = https://{{ .ghuser }}@github.com/
+
