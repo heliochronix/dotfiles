@@ -5,9 +5,9 @@
 {{- $osid := .chezmoi.os -}}
 {{- if hasKey .chezmoi.osRelease "id" -}}
     {{- $osid = printf "%s-%s" $osid .chezmoi.osRelease.id -}}
-{{- end -}}
-{{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
-    {{- $osid = printf "%s-wsl" $osid -}}
+    {{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+        {{- $osid = printf "%s-wsl" $osid -}}
+    {{- end -}}
 {{- end -}}
 
 [data]
