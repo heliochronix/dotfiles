@@ -172,3 +172,4 @@ export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/
 alias swift-toolkit="docker run -it --rm -e DISPLAY=$DISPLAY -e USERNAME=$USER -u $(id -u):$(id -g) -v $HOME/work:/work -v $HOME/docker_home:/home/$USER -w /\${PWD#$HOME/} --dns-search secure.tethers.com docker.secure.tethers.com/swift/swift-toolkit"
 alias raven-toolkit="docker run -it --rm -e DISPLAY=$DISPLAY -e USERNAME=$USER -u $(id -u):$(id -g) -v $HOME/work:/work -v $HOME/docker_home:/home/$USER -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK) -w /\${PWD#$HOME/} -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK --dns-search secure.tethers.com docker.secure.tethers.com/raven/raven-toolkit"
 {{- end }}
+alias k8s-show-ns="kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found  -n"
