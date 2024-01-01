@@ -100,6 +100,7 @@ URxvt*foreground:               B_fg
 !URxvt*pointerColorForeground:   S_base1
 !URxvt*intensityStyles:          false
 
+Xcursor.size:                   24
 Xft.antialias:                  true
 Xft.rgba:                       rgb
 Xft.hinting:                    true
