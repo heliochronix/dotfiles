@@ -1,10 +1,5 @@
 #!/bin/sh
 
-export STEAM_FRAME_FORCE_CLOSE=1
-{{- if ne .osid "linux-ubuntu-wsl" }}
-export SSH_AUTH_SOCK=$HOME/.1password/agent.sock
-{{- end }}
-
 xbindkeys &
 ~/.fehbg &
 picom &
