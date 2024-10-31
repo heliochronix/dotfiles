@@ -1,8 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 {{- if eq .osid "darwin" }}
-export PATH=$HOME/.local/bin:$HOME/.cargo/bin:/opt/homebrew/bin:$PATH
-{{- else }}
-export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
+export /opt/homebrew/bin:$PATH
 {{- end }}
 export FZF_BASE=$HOME/.vim/plugged/fzf
 
