@@ -21,7 +21,7 @@ set $menu dmenu_path | wmenu -m '00B400' -M '303030' -n '00B400' -N '303030' -s 
 #
 {{- if eq .chezmoi.hostname "interface01" }}
 output DP-1 position 0 0 mode 3840x2160
-output DP-2 position 3840 0 mode 2560x1440 scale 0.8
+output DP-2 position 3840 0 mode 2560x1440
 focus output DP-1
 {{- else if eq .chezmoi.hostname "interface02" }}
 output eDP-1 position 0 0 mode 2560x1440 scale 1
