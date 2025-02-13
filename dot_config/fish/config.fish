@@ -1,3 +1,4 @@
+set fish_greeting
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.cargo/bin"
 starship init fish | source
