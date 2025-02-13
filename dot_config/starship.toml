@@ -5,10 +5,12 @@ add_newline = false
 
 [username]
 show_always = true
-format = '[$user]($style)@'
+format = '[$user]($style)'
 
 [hostname]
-ssh_only = false
 ssh_symbol = '🌐'
-style = 'bold blue'
-format = '[$hostname$ssh_symbol]($style):'
+style = 'bold dimmed green'
+format = '@[$hostname]($style)'
+
+[directory]
+format = ':[$path]($style)[$read_only]($read_only_style) '
