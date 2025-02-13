@@ -9,5 +9,6 @@ format = '[$user]($style)@'
 
 [hostname]
 ssh_only = false
-ssh_symbol = "🌐"
+ssh_symbol = '🌐'
+style = 'bold blue'
 format = '[$hostname$ssh_symbol]($style):'
