@@ -58,8 +58,10 @@ Rust utilities installed via cargo from crates.io:
 ### Post-Install Scripts
 Located in `.chezmoiscripts/`:
 - `run_once_install_rustup.sh` - one-time installation of Rust toolchain
-- `run_after_01_rustup_update.sh` - updates rustup and Rust toolchains (runs first)
-- `run_after_02_build_utils.sh` - builds Rust utilities from source (runs after rustup update)
+- `run_once_install_fisher.sh` - one-time installation of fisher and initial plugins
+- `run_after_01_rustup_update.sh` - updates rustup and Rust toolchains
+- `run_after_02_build_utils.sh` - installs/updates Rust utilities from crates.io
+- `run_after_fisher_update.sh` - updates fisher and all fish plugins
 - `run_starship.sh` - installs Starship prompt
 - `run_after_vimrc.sh` - updates Vim plugins via vim-plug
 - `run_after_fzf.sh` - installs/updates fzf binary
@@ -67,7 +69,7 @@ Located in `.chezmoiscripts/`:
 Scripts with numbered prefixes (01_, 02_) ensure explicit execution order within the same phase.
 
 ### Key Configuration Areas
-- **Shells**: fish (primary with starship), zsh (with oh-my-zsh)
+- **Shells**: fish (primary with plugins managed by fisher), zsh (with oh-my-zsh)
 - **Editors**: Vim and Neovim with vim-plug
 - **Window Managers**: Sway and Hyprland (Wayland)
 - **Terminal**: Alacritty with Borg color scheme
