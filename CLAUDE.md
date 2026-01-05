@@ -57,6 +57,6 @@ Located in `.chezmoiscripts/`:
 ### Key Configuration Areas
 - **Shells**: fish (primary with starship), zsh (with oh-my-zsh)
 - **Editors**: Vim and Neovim with vim-plug
-- **Window Managers**: Sway (Wayland), i3 (X11)
+- **Window Managers**: Sway and Hyprland (Wayland), i3 (X11)
 - **Terminal**: Alacritty with Borg color scheme
 - **SSH**: Integrates with 1Password SSH agent
