@@ -212,25 +212,7 @@ client.background       #000000
 #
 # Status Bar:
 #
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    swaybar_command waybar
-
-#    position bottom
-#    status_command i3blocks
-#
-#    colors {
-#        background          #000000
-#        statusline          #FFFFFF
-#        separator           #666666
-#
-#        focused_workspace   #009400 #00B400 #000000
-#        active_workspace    #0C0C0C #303030 #00B400
-#        inactive_workspace  #0C0C0C #000000 #484848
-#        urgent_workspace    #303030 #E10000 #000000
-#        binding_mode        #303030 #E10000 #000000
-#    }
-}
+exec waybar -c $HOME/.config/waybar/sway/config
 
 include /etc/sway/config.d/*
 include $HOME/.config/sway/config.d/*
