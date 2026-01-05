@@ -8,6 +8,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a personal dotfiles repository managed with **chezmoi** (https://chezmoi.io). It contains configuration files for a Linux development environment targeting Wayland compositors.
 
+**Philosophy**: These dotfiles should work on any system without requiring system-level package installation (except for the shell itself - fish or zsh). All tools and binaries are installed at the user level via chezmoi external dependencies and post-install scripts.
+
 ## Common Commands
 
 ```bash
@@ -51,8 +53,11 @@ Managed via `.chezmoiexternal.toml`:
 
 ### Post-Install Scripts
 Located in `.chezmoiscripts/`:
+- `run_once_install_rustup.sh` - one-time installation of Rust toolchain
+- `run_after_rustup_update.sh` - updates rustup and Rust toolchains
 - `run_starship.sh` - installs Starship prompt
 - `run_after_vimrc.sh` - updates Vim plugins via vim-plug
+- `run_after_fzf.sh` - installs/updates fzf binary
 
 ### Key Configuration Areas
 - **Shells**: fish (primary with starship), zsh (with oh-my-zsh)
