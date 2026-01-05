@@ -50,14 +50,21 @@ Configuration data is defined in `.chezmoi.toml.tmpl` and prompted on first run.
 Managed via `.chezmoiexternal.toml`:
 - oh-my-zsh and spaceship-prompt (zsh)
 - vim-plug (vim/neovim plugin manager)
+- fzf (fuzzy finder)
+
+Rust utilities installed via cargo from crates.io:
+- fd-find, bat, ripgrep (installed to ~/.local/bin via run_after_02_build_utils.sh)
 
 ### Post-Install Scripts
 Located in `.chezmoiscripts/`:
 - `run_once_install_rustup.sh` - one-time installation of Rust toolchain
-- `run_after_rustup_update.sh` - updates rustup and Rust toolchains
+- `run_after_01_rustup_update.sh` - updates rustup and Rust toolchains (runs first)
+- `run_after_02_build_utils.sh` - builds Rust utilities from source (runs after rustup update)
 - `run_starship.sh` - installs Starship prompt
 - `run_after_vimrc.sh` - updates Vim plugins via vim-plug
 - `run_after_fzf.sh` - installs/updates fzf binary
+
+Scripts with numbered prefixes (01_, 02_) ensure explicit execution order within the same phase.
 
 ### Key Configuration Areas
 - **Shells**: fish (primary with starship), zsh (with oh-my-zsh)
