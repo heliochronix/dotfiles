@@ -62,11 +62,14 @@ Located in `.chezmoiscripts/`:
 - `run_after_01_rustup_update.sh` - updates rustup and Rust toolchains
 - `run_after_02_build_utils.sh` - installs/updates Rust utilities from crates.io
 - `run_after_fisher_update.sh` - updates fisher and all fish plugins
-- `run_starship.sh` - installs Starship prompt
-- `run_after_vimrc.sh` - updates Vim plugins via vim-plug
-- `run_after_fzf.sh` - installs/updates fzf binary
+- `run_starship.sh` - installs/updates Starship prompt
+- `run_after_vim_plugins.sh` - updates Vim plugins via vim-plug (depends on .vimrc)
+- `run_after_fzf.sh` - installs/updates fzf binary (depends on .fzf external)
 
-Scripts with numbered prefixes (01_, 02_) ensure explicit execution order within the same phase.
+Script prefixes:
+- `run_once_` - runs only once (tracked by chezmoi state)
+- `run_` - runs during file updates (numbered for order: 01, 02)
+- `run_after_` - runs after file/external updates (for scripts with dependencies)
 
 ### Key Configuration Areas
 - **Shells**: fish (primary with plugins managed by fisher), zsh (with oh-my-zsh)

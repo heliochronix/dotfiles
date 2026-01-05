@@ -5,8 +5,12 @@ Tasks and plans for this dotfiles repository.
 ## Pending
 
 ### Fish Shell Migration
-- [ ] Configure fzf integration for reverse search (global command history)
-- [ ] Configure fzf integration for file search
+- [x] Configure fzf integration for reverse search (global command history)
+- [x] Configure fzf integration for file search
+- [x] Set up Rust toolchain (rustup) for user-local builds
+- [x] Install fd, bat, ripgrep utilities via cargo
+- [x] Set up fisher plugin manager
+- [x] Install fzf.fish plugin
 - [ ] Identify and migrate other useful ZSH+OMZ features
 - [ ] Test and validate parity with ZSH setup
 

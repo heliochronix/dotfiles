@@ -1,6 +1,12 @@
 #!/bin/bash
 
 # Install/update fzf binary
+# Runs after files are updated to ensure .fzf repo is cloned
+
 if [ -d "$HOME/.fzf" ]; then
-    "$HOME/.fzf/install" --bin > /dev/null 2>&1
+    echo "Installing/updating fzf binary..."
+    "$HOME/.fzf/install" --bin
+    echo "fzf binary complete"
+else
+    echo "fzf repository not found at ~/.fzf, skipping..."
 fi
