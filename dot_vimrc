@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
