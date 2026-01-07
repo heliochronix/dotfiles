@@ -2,8 +2,6 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-**At the start of each session, read `TODO.md` for current tasks and plans.**
-
 ## Project Overview
 
 This is a personal dotfiles repository managed with **chezmoi** (https://chezmoi.io). It contains configuration files for a Linux development environment targeting Wayland compositors.
