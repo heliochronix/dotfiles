@@ -9,5 +9,5 @@ function swift-toolkit --description 'Run swift-toolkit in Docker'
         -v /tmp/.X11-unix:/tmp/.X11-unix \
         -w (pwd) \
         --dns-search secure.tethers.com \
-        docker.secure.tethers.com/swift/swift-toolkit $argv
+        docker.secure.tethers.com/swift/swift-toolkit "$argv"
 end

@@ -5,5 +5,5 @@ function pyraven --description 'Run pyraven in Docker'
         -v /tmp/.X11-unix:/tmp/.X11-unix \
         -w (pwd) \
         --dns-search secure.tethers.com \
-        pyraven:latest $argv
+        pyraven:latest "$argv"
 end

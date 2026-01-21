@@ -10,5 +10,5 @@ function raven-toolkit --description 'Run raven-toolkit in Docker'
         -v /tmp/.X11-unix:/tmp/.X11-unix \
         -w (pwd) \
         --dns-search secure.tethers.com \
-        docker.secure.tethers.com/raven/raven-toolkit:2022.2 $argv
+        docker.secure.tethers.com/raven/raven-toolkit:2022.2 "$argv"
 end
