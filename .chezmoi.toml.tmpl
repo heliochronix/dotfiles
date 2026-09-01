@@ -1,6 +1,7 @@
 {{- $name  := promptStringOnce . "name" "Your Name" "Miles Simpson" -}}
 {{- $email := promptStringOnce . "email" "Email address" "miles@milessimpson.com" -}}
 {{- $ghuser := promptStringOnce . "ghuser" "GitHub User" "heliochronix" -}}
+{{- $work := promptBoolOnce . "work" "Is this a work computer" false -}}
 
 {{- $osid := .chezmoi.os -}}
 {{- if hasKey .chezmoi.osRelease "id" -}}
@@ -15,3 +16,4 @@
     email = {{ $email | quote }}
     ghuser = {{ $ghuser | quote }}
     osid  = {{ $osid  | quote }}
+    work  = {{ $work }}

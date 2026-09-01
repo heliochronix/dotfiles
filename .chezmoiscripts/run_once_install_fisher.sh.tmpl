@@ -6,6 +6,9 @@
 # List of fisher plugins to install
 FISHER_PLUGINS=(
     "PatrickF1/fzf.fish"
+{{- if .work }}
+    "danhper/fish-ssh-agent"
+{{- end }}
 )
 
 if ! command -v fish &> /dev/null; then

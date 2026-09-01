@@ -41,6 +41,7 @@ Files ending in `.tmpl` use Go template syntax with chezmoi data:
 - `{{ .chezmoi.hostname }}` - machine hostname
 - `{{ .chezmoi.os }}` - operating system
 - `{{ .osid }}` - custom OS identifier (arch, fedora, etc.)
+- `{{ .work }}` - boolean, true on work machines (gates work tooling vs. home settings)
 
 Configuration data is defined in `.chezmoi.toml.tmpl` and prompted on first run.
 
@@ -56,7 +57,7 @@ Rust utilities installed via cargo from crates.io:
 ### Post-Install Scripts
 Located in `.chezmoiscripts/`:
 - `run_once_install_rustup.sh` - one-time installation of Rust toolchain
-- `run_once_install_fisher.sh` - one-time installation of fisher and initial plugins
+- `run_once_install_fisher.sh.tmpl` - one-time installation of fisher and initial plugins
 - `run_after_01_rustup_update.sh` - updates rustup and Rust toolchains
 - `run_after_02_build_utils.sh` - installs/updates Rust utilities from crates.io
 - `run_after_fisher_update.sh` - updates fisher and all fish plugins
