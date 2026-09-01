@@ -1,0 +1,24 @@
+{{- if eq .chezmoi.hostname "interface01" -}}
+# 30-dcs-headless.conf -- headless outputs for DCS cockpit-display capture
+#
+# Creates invisible 1024x1024 outputs directly below DP-1
+# (within DP-1's 3840px width, so the DCS window never overlaps DP-2 at x=3840).
+# DCS renders one big window spanning DP-1 + these outputs; each headless output
+# is then viewed via wl-mirror or streamed.
+
+exec swaymsg "create_output"
+exec swaymsg "create_output"
+exec swaymsg "create_output"
+
+output HEADLESS-1 mode --custom 1024x1024@60Hz position 0 2160
+output HEADLESS-2 mode --custom 1024x1024@60Hz position 1024 2160
+output HEADLESS-3 mode --custom 1024x1024@60Hz position 2048 2160
+
+workspace mfd-left   output HEADLESS-1
+workspace mfd-center output HEADLESS-2
+workspace mfd-right  output HEADLESS-3
+
+# DCS (launched via Steam under XWayland; app_id is null, matched by X11 class)
+# always floats so it isn't tiled when it maps.
+for_window [class="steam_app_223750"] floating enable, border none, move absolute position 0 0
+{{- end }}
