@@ -1,0 +1,69 @@
+@import url("file:///etc/xdg/waybar/style.css");
+
+* {
+    font-family: "Hack Nerd Font", monospace;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: none;
+    border-top: 2px solid #303030;
+    color: #009400;
+}
+
+button:hover {
+    box-shadow: inset 0 -3px #00B400;
+}
+
+#workspaces button {
+    color: #009400;
+}
+
+#workspaces button:hover {
+    background: #202020;
+}
+
+#workspaces button.visible {
+    background-color: #484848;
+    color: #00B400;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: #00B400;
+    color: #000000;
+    box-shadow: inset 0 -3px #00DA00;
+}
+
+#workspaces button.urgent {
+    background-color: #E10000;
+    color: #000000;
+}
+
+#mode {
+    background-color: #E16600;
+    color: #000000;
+    box-shadow: none;
+}
+
+#clock {
+    background-color: #303030;
+    color: #00B400;
+}
+
+#tray {
+    background-color: #202020;
+}
+
+#tray > .needs-attention {
+    background-color: #E10000;
+}
+
+tooltip {
+    background-color: #000000;
+    border: 2px solid #303030;
+}
+
+tooltip label {
+    color: #00B400;
+}
