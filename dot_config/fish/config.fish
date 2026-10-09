@@ -11,3 +11,5 @@ end
 if not set -q SSH_AUTH_SOCK
     set -x SSH_AUTH_SOCK $HOME/.1password/agent.sock
 end
+
+umask 022
