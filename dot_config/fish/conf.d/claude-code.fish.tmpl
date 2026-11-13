@@ -1,0 +1,9 @@
+set -gx ANTHROPIC_BASE_URL "{{ .anthropicBaseUrl }}"
+set -gx ANTHROPIC_CUSTOM_HEADERS "x-litellm-customer-id: {{ .email }}"
+set -gx ANTHROPIC_DEFAULT_MODEL "best-sonnet"
+set -gx ANTHROPIC_DEFAULT_SONNET_MODEL "best-sonnet"
+set -gx ANTHROPIC_DEFAULT_HAIKU_MODEL "best-haiku"
+set -gx ANTHROPIC_DEFAULT_OPUS_MODEL "best-opus"
+set -gx ANTHROPIC_DEFAULT_FABLE_MODEL "best-fable"
+set -gx CLAUDE_CODE_SUBAGENT_MODEL "best-haiku"
+set -gx CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC 1

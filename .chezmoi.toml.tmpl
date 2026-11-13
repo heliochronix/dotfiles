@@ -2,6 +2,10 @@
 {{- $email := promptStringOnce . "email" "Email address" "miles@milessimpson.com" -}}
 {{- $ghuser := promptStringOnce . "ghuser" "GitHub User" "heliochronix" -}}
 {{- $work := promptBoolOnce . "work" "Is this a work computer" false -}}
+{{- $anthropicBaseUrl := "" -}}
+{{- if $work -}}
+    {{- $anthropicBaseUrl = promptStringOnce . "anthropicBaseUrl" "Anthropic API base URL" -}}
+{{- end -}}
 
 {{- $osid := .chezmoi.os -}}
 {{- if hasKey .chezmoi.osRelease "id" -}}
@@ -17,3 +21,6 @@
     ghuser = {{ $ghuser | quote }}
     osid  = {{ $osid  | quote }}
     work  = {{ $work }}
+{{- if $work }}
+    anthropicBaseUrl = {{ $anthropicBaseUrl | quote }}
+{{- end }}
